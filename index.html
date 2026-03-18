@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kép középen</title>
+    <title>Kép középen - Email küldés</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
             display: flex;
-            justify-content: center; /* Vízszintes középre igazítás */
-            align-items: center;     /* Függőleges középre igazítás */
-            background-color: #f0f0f0; /* Opcionális háttérszín */
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
         }
 
         img {
             max-width: 100%;
             height: auto;
             display: block;
+            border: none; /* Eltávolítja az esetleges alapértelmezett keretet a link miatt */
+        }
+
+        /* Opcionális: jelzi a felhasználónak, hogy a kép kattintható */
+        a:hover img {
+            opacity: 0.8;
+            transition: 0.3s;
         }
     </style>
 </head>
 <body>
 
-    <img src="kep.png" alt="Megjelenítendő kép">
+    <a href="mailto:servicedesk@infobex.hu">
+        <img src="kep.png" alt="Kattints ide az e-mail küldéshez">
+    </a>
 
 </body>
 </html>
